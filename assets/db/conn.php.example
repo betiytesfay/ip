@@ -1,0 +1,18 @@
+<?php
+// Database Configuration
+// Copy this file to conn.php and update with your database credentials
+
+$host = "localhost";
+$user = "root";           // Change to your MySQL username
+$pass = "";               // Change to your MySQL password
+$db = "dms";              // Change to your database name
+
+$conn = mysqli_connect($host, $user, $pass, $db);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Set charset to utf8mb4
+mysqli_set_charset($conn, "utf8mb4");
+?>

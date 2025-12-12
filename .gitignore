@@ -1,0 +1,59 @@
+# Database configuration (contains sensitive credentials)
+assets/db/conn.php
+
+# Email configuration (contains sensitive credentials)
+assets/config/email_config.php
+
+# Uploaded files and user-generated content
+pages/profile_pic/*
+!pages/profile_pic/.gitkeep
+pages/camp_image/*
+!pages/camp_image/.gitkeep
+
+# XAMPP specific files
+.htaccess
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Log files
+*.log
+error_log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Node modules (if any)
+node_modules/
+
+# Composer (if any)
+vendor/
+
+# Environment files
+.env
+.env.local
+
+# Cache files
+*.cache
+
+# Large image files
+*.gif
+!assets/images/*.gif
+adm.gif
+
+# Personal profile images (not web interface related)
+assets/images/ash.png
+assets/images/pra.png
+assets/images/jos-1.png
+assets/images/jos-avt.png
+assets/images/p1-2.png

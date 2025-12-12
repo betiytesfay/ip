@@ -1,0 +1,84 @@
+*{
+  
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box; 
+}
+html,body{
+    transition: all 0.5s ease-in;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+}
+body {
+    overflow-x: hidden !important;
+    max-width: 100vw;
+}
+
+/*PAGE 1 CSS*/
+
+.section{
+    width: 100%;
+    min-height: 800px;
+}
+ h1,p{
+
+font-family: sans-serif,arial;
+font-weight: bold;
+ }
+.text-header{
+  margin-top:10px;
+  margin-left:5%;
+    color: black;
+}
+.title-text{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 100px;
+}
+.green-text{
+color: rgb(19, 202, 141);
+}
+.red-text{
+color: rgb(240, 71, 71);
+}
+.donate-btn a{
+
+    padding: 10px;
+    color:white;
+    background-color: red;
+   border-radius: 10px;
+   font-size: 18px;
+   font-family:arial;
+   transition: .5s all ease-in;
+}
+.donate-btn a:hover{
+    color: #fff;
+    background-color:  rgb(19, 202, 141);
+    transform: scale(103%);
+
+}
+
+
+ .section1{
+     background:rgb(66, 36, 36) ;
+     color: #69668a;
+     
+ }
+ .section2{
+    background:#385894 ;
+    color: #81d2d5;
+ }
+ 
+.section3 {
+
+color: #0a0a0a;
+overflow-y: auto;
+overflow-x: hidden;
+}
+.section4{
+    background:#385894 ;
+    color: #81d2d5;
+ }
+
+
