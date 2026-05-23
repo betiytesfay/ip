@@ -64,9 +64,7 @@ if ($exe) {
             <div class="card-header d-flex justify-content-between align-items-center  ">
                 <img src="../assets/images/logo.png" class="img-fluid" alt="Logo_image" width="40" height="40">
                 <h1 class="fs-4 fw-bolder text-center mb-0">DONOR HUB</h1>
-                <a href="" class="btn btn-danger"
-                    onclick="var a = confirm('Do you want to leave the page'); if(a){window.history.back();}"><i
-                        class="bi bi-arrow-left-circle m-1"></i>BACK</a>
+                <a href="r_home.php" class="btn btn-danger"><i class="bi bi-arrow-left-circle m-1"></i>BACK</a>
             </div>
             <div class="card-body ">
             <?php
@@ -86,7 +84,7 @@ if ($exe) {
                     novalidate>
                     <div class="text-center">
                     <?php include '../includes/message.php'; ?>
-                        <img src="<?= $info['profile_pic'];?>" alt="profile" width="120" height="120" class=" img-fluid" style="border-radius:50%;">
+                        <img src="<?= $info['profile_pic'];?>" alt="profile" style="width:120px;height:120px;border-radius:50%;object-fit:cover;">
                     </div>
 
                     <div class="col-md-4">
@@ -341,3 +339,4 @@ function confirmPasswordChange(event) {
 </script>
 
 </html>
+

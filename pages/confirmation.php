@@ -1179,7 +1179,7 @@ try {
               <?php if($isBloodCampaign): ?>
                 <i class="bi bi-droplet"></i><?php echo $donated_amt; ?> pint<?= $donated_amt != 1 ? 's' : ''; ?>
               <?php else: ?>
-                <i class="bi bi-currency-rupee"></i><?php echo $donated_amt; ?>
+                <i class="bi bi-currency-dollar"></i><?php echo $donated_amt; ?>
               <?php endif; ?>
             </li>
             <li class="list-group-item">
@@ -1187,7 +1187,7 @@ try {
               <?php if($isBloodCampaign): ?>
                 <i class="bi bi-droplet"></i><?php echo $amt_collected; ?> pint<?= $amt_collected != 1 ? 's' : ''; ?>
               <?php else: ?>
-                <i class="bi bi-currency-rupee"></i><?php echo $amt_collected; ?>
+                <i class="bi bi-currency-dollar"></i><?php echo $amt_collected; ?>
               <?php endif; ?>
             </li>
             <li class="list-group-item">
@@ -1195,7 +1195,7 @@ try {
               <?php if($isBloodCampaign): ?>
                 <i class="bi bi-droplet"></i><?php echo $est_amt; ?> pint<?= $est_amt != 1 ? 's' : ''; ?>
               <?php else: ?>
-                <i class="bi bi-currency-rupee"></i><?php echo $est_amt; ?>
+                <i class="bi bi-currency-dollar"></i><?php echo $est_amt; ?>
               <?php endif; ?>
             </li>
             <li class="list-group-item">
@@ -1264,3 +1264,4 @@ try {
 </body>
 
 </html>
+

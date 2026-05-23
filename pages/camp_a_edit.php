@@ -133,7 +133,7 @@ $exe = mysqli_query($conn, $rupdate);
           <div class="col-md-12" id="amount_field">
               <label for="est_amt" class="form-label" id="amount_label"><?php echo ($Ctype == 'blood') ? 'Quantity of Blood (in pints)' : 'Estimated Amount'; ?></label>
               <div class="input-group">
-                <span class="input-group-text" id="amount_icon"><i class="bi <?php echo ($Ctype == 'blood') ? 'bi-droplet' : 'bi-currency-rupee'; ?>"></i></span>
+                <span class="input-group-text" id="amount_icon"><i class="bi <?php echo ($Ctype == 'blood') ? 'bi-droplet' : 'bi-currency-dollar'; ?>"></i></span>
                 <input type="text" value="<?= $Eamt; ?>" name="est_amt" id="est_amt" maxlength="<?php echo ($Ctype == 'blood') ? '3' : '5'; ?>" placeholder="<?php echo ($Ctype == 'blood') ? 'eg. 5, 10, 20 pints' : 'eg.100,500,1000'; ?>" class="form-control" required style="pointer-events: none;">
                 </div>
                 <div class="invalid-feedback" id="amount_feedback">
@@ -229,3 +229,4 @@ $exe = mysqli_query($conn, $rupdate);
 </script>
 
 </html>
+

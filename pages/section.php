@@ -24,7 +24,7 @@ if(mysqli_num_rows($result)>0){
     
     </div>
     <div class="caption">
-      Raised: <?php if($isBlood): ?><i class="bi bi-droplet"></i><?php echo $row['amt_collected']; ?> pint<?= $row['amt_collected'] != 1 ? 's' : ''; ?><?php else: ?><i class="bi bi-currency-rupee"></i><?php echo $row['amt_collected']; ?><?php endif; ?>
+      Raised: <?php if($isBlood): ?><i class="bi bi-droplet"></i><?php echo $row['amt_collected']; ?> pint<?= $row['amt_collected'] != 1 ? 's' : ''; ?><?php else: ?><i class="bi bi-currency-dollar"></i><?php echo $row['amt_collected']; ?><?php endif; ?>
     </div>
     <hr class="vertical-line">
     <div class="created-by">
@@ -57,3 +57,5 @@ if(mysqli_num_rows($result)>0){
 mysqli_close($conn);
 ?>
 </div>
+
+

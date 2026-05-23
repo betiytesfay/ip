@@ -80,7 +80,7 @@ window.addEventListener('load', function() {
                   <?php if($isBlood): ?>
                     <i class="bi bi-droplet"></i><?php echo $donor['donated_amt']; ?> pint<?= $donor['donated_amt'] != 1 ? 's' : ''; ?>
                   <?php else: ?>
-                    <i class="bi bi-currency-rupee"></i><?php echo $donor['donated_amt']; ?>
+                    <i class="bi bi-currency-dollar"></i><?php echo $donor['donated_amt']; ?>
                   <?php endif; ?>
                 </p>
               </div>
@@ -104,3 +104,4 @@ window.addEventListener('load', function() {
 </body>
 
 </html>
+

@@ -341,7 +341,7 @@ width:270px;
   <div class="col-md-12" id="amount_field">
     <label for="est_amt" class="form-label" id="amount_label">Estimated Amount</label>
     <div class="input-group">
-      <span class="input-group-text" id="amount_icon"><i class="bi bi-currency-rupee"></i></span>
+      <span class="input-group-text" id="amount_icon"><i class="bi bi-currency-dollar"></i></span>
       <input type="text" name="est_amt" id="est_amt" placeholder="eg.100,500,1000" class="form-control" onblur="validateAmountInput('est_amt');" maxlength="6" required>
     </div>
     <div class="invalid-feedback" id="amount_feedback">
@@ -434,7 +434,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('donation_time').removeAttribute('required');
       // Show Estimated Amount field
       amountLabel.textContent = 'Estimated Amount';
-      amountIcon.innerHTML = '<i class="bi bi-currency-rupee"></i>';
+      amountIcon.innerHTML = '<i class="bi bi-currency-dollar"></i>';
       estAmtInput.placeholder = 'eg.100,500,1000';
       amountFeedback.textContent = 'Enter Amount To donate';
       amountHelp.style.display = 'none';
@@ -519,7 +519,7 @@ document.addEventListener('DOMContentLoaded', function() {
                       <?= $row['amt_collected'] ?> pint<?= $row['amt_collected'] != 1 ? 's' : ''; ?>
                     </b></span>
                   <?php else: ?>
-                  <span class="me-3"><i class="bi bi-currency-rupee "></i><b>
+                  <span class="me-3"><i class="bi bi-currency-dollar "></i><b>
                       <?= $row['amt_collected'] ?>
                     </b></span>
                   <?php endif; ?>
@@ -646,7 +646,7 @@ if ($row['status'] == 'active') {
                       <?= $row['amt_collected'] ?> pint<?= $row['amt_collected'] != 1 ? 's' : ''; ?>
                     </b></span>
                   <?php else: ?>
-                  <span class="me-3"><i class="bi bi-currency-rupee "></i><b>
+                  <span class="me-3"><i class="bi bi-currency-dollar "></i><b>
                       <?= $row['amt_collected'] ?>
                     </b></span>
                   <?php endif; ?>
@@ -764,7 +764,7 @@ echo '<span class="text-success fw-bold">Active</span>';
                       <?= $row['amt_collected'] ?> pint<?= $row['amt_collected'] != 1 ? 's' : ''; ?>
                     </b></span>
                   <?php else: ?>
-                  <span class="me-3"><i class="bi bi-currency-rupee "></i><b>
+                  <span class="me-3"><i class="bi bi-currency-dollar "></i><b>
                       <?= $row['amt_collected'] ?>
                     </b></span>
                   <?php endif; ?>
@@ -1036,8 +1036,8 @@ echo '<span class="text-success fw-bold">Active</span>';
                             <tr>
                                 <td><?= $title ?></td>
                                 <td><?= $createdBy ?></td>
-                                <td><?php if($isBlood): ?><i class="bi bi-droplet"></i><?= $estimatedAmount ?> pint<?= $estimatedAmount != 1 ? 's' : ''; ?><?php else: ?><i class="bi bi-currency-rupee"></i><?= $estimatedAmount ?><?php endif; ?></td>
-                                <td><?php if($isBlood): ?><i class="bi bi-droplet"></i><?= $receivedAmount ?> pint<?= $receivedAmount != 1 ? 's' : ''; ?><?php else: ?><i class="bi bi-currency-rupee"></i><?= $receivedAmount ?><?php endif; ?></td>
+                                <td><?php if($isBlood): ?><i class="bi bi-droplet"></i><?= $estimatedAmount ?> pint<?= $estimatedAmount != 1 ? 's' : ''; ?><?php else: ?><i class="bi bi-currency-dollar"></i><?= $estimatedAmount ?><?php endif; ?></td>
+                                <td><?php if($isBlood): ?><i class="bi bi-droplet"></i><?= $receivedAmount ?> pint<?= $receivedAmount != 1 ? 's' : ''; ?><?php else: ?><i class="bi bi-currency-dollar"></i><?= $receivedAmount ?><?php endif; ?></td>
                                 <td><?= $totalDonors ?></td>
                                 <td>
                                     <a href="../pages/donor_amodal.php?camp_id=<?= $campaignId ?>" role="button"class="btn btn-sm btn-primary">
@@ -1163,7 +1163,7 @@ echo '<span class="text-success fw-bold">Active</span>';
                       <?= $row['amt_collected'] ?> pint<?= $row['amt_collected'] != 1 ? 's' : ''; ?>
                     </b></span>
                   <?php else: ?>
-                  <span class="me-3"><i class="bi bi-currency-rupee "></i><b>
+                  <span class="me-3"><i class="bi bi-currency-dollar "></i><b>
                       <?= $row['amt_collected'] ?>
                     </b></span>
                   <?php endif; ?>
@@ -1400,3 +1400,5 @@ function sec9() {
   }
 </style>
     </html>
+
+

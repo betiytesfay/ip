@@ -78,14 +78,14 @@ window.addEventListener('load', function() {
                   <?php if($isBlood): ?>
                     <i class="bi bi-droplet"></i><?php echo $donor['est_amt']; ?> pint<?= $donor['est_amt'] != 1 ? 's' : ''; ?>
                   <?php else: ?>
-                    <i class="bi bi-currency-rupee"></i><?php echo $donor['est_amt']; ?>
+                    <i class="bi bi-currency-dollar"></i><?php echo $donor['est_amt']; ?>
                   <?php endif; ?>
                 </p> 
                 <p class="mb-0  ms-4 ">Collected <?php echo $isBlood ? 'Quantity' : 'Amount'; ?> 
                   <?php if($isBlood): ?>
                     <i class="bi bi-droplet"></i><?php echo $donor['amt_collected']; ?> pint<?= $donor['amt_collected'] != 1 ? 's' : ''; ?>
                   <?php else: ?>
-                    <i class="bi bi-currency-rupee"></i><?php echo $donor['amt_collected']; ?>
+                    <i class="bi bi-currency-dollar"></i><?php echo $donor['amt_collected']; ?>
                   <?php endif; ?>
                 </p>
             </div>
@@ -115,3 +115,4 @@ window.addEventListener('load', function() {
 </body>
 
 </html>
+

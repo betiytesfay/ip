@@ -356,10 +356,10 @@ if ($resultDonors && mysqli_num_rows($resultDonors) > 0) {
                             <?= $estAmt; ?> pint<?= $estAmt != 1 ? 's' : ''; ?>
                           </b></span>
                         <?php else: ?>
-                        <span class="me-2 text-body-dark"><i class="bi bi-currency-rupee t"></i><b>
+                        <span class="me-2 text-body-dark"><i class="bi bi-currency-dollar t"></i><b>
                             <?= $amtCollected; ?>
                           </b></span>
-                        of &nbsp;<span class="me-3 text-body-secondary"><i class="bi bi-currency-rupee "></i><b>
+                        of &nbsp;<span class="me-3 text-body-secondary"><i class="bi bi-currency-dollar "></i><b>
                             <?= $estAmt; ?>
                           </b></span>
                         <?php endif; ?>
@@ -408,7 +408,7 @@ if ($resultDonors && mysqli_num_rows($resultDonors) > 0) {
                   <?php if($isBloodCampaign): ?>
                     <i class="bi bi-droplet"></i><?php echo $donor['donated_amt']; ?> pint<?= $donor['donated_amt'] != 1 ? 's' : ''; ?>
                   <?php else: ?>
-                    <i class="bi bi-currency-rupee"></i><?php echo $donor['donated_amt']; ?>
+                    <i class="bi bi-currency-dollar"></i><?php echo $donor['donated_amt']; ?>
                   <?php endif; ?>
                 </p>
               </div>
@@ -480,7 +480,7 @@ if ($resultDonors && mysqli_num_rows($resultDonors) > 0) {
             <div class="mb-3">
               <label for="admin-email" class="form-label" id="donate_label">Amount</label>
               <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-currency-rupee"></i></span>
+                <span class="input-group-text"><i class="bi bi-currency-dollar"></i></span>
                 <input type="number" name="d_amt" id="d_amt" step="1" min="100" max="999999" placeholder="eg.100,500,1000" class="form-control" required>
                 <div class="invalid-feedback" id="donate_feedback">
                   Enter Amount To donate
@@ -668,3 +668,4 @@ function validateAmountInput(fieldid) {
 </style>
 
 </html>
+

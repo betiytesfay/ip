@@ -32,3 +32,5 @@ mysqli_close($conn);
 // Send a response back to the XHR request
 http_response_code(200);
 ?>
+
+
