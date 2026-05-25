@@ -15,8 +15,8 @@ if(isset($_GET['code'])) {
   // If a user is found with the given verification code, update their record to mark email as verified
   if(mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_assoc($result);
-    $user_id = $row['id'];
-    $query = "UPDATE users SET email_verified = 1 WHERE id = $user_id";
+    $user_id = $row['user_id'];
+    $query = "UPDATE users SET email_verified = 1 WHERE user_id = $user_id";
     mysqli_query($conn, $query);
     echo "<div class='container mt-5'><h1>Your email has been verified!</h1></div>";
     // Destroy

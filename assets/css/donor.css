@@ -1,0 +1,652 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f6fb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: block;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+  background: #1a1a2e;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+  background: #16213e;
+  transform: scale(1.02);
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100%;
+  background: linear-gradient(180deg, #1a1a2e 0%, #0f3460 100%);
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+  overflow-y: auto;
+  box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-brand {
+  padding: 25px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-brand img {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.sidebar-brand span {
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.sidebar .nav {
+  padding: 15px 0;
+}
+
+.sidebar .nav-item {
+  margin: 5px 0;
+}
+
+.sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.sidebar .nav-link i {
+  font-size: 1.2rem;
+  min-width: 24px;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  background: rgba(108, 99, 255, 0.2);
+  color: white;
+  border-left: 3px solid #6c63ff;
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.profile-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profile-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.profile-btn img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-btn .name {
+  flex: 1;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Main Content */
+.main {
+  padding: 70px 15px 30px 15px;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* Welcome Hero */
+.welcome-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 25px;
+  color: white;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-hero h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.welcome-hero p {
+  font-size: 0.9rem;
+  opacity: 0.95;
+  margin-bottom: 15px;
+}
+
+.welcome-hero img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.welcome-hero .btn-light {
+  background: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #667eea;
+  transition: all 0.3s ease;
+}
+
+.welcome-hero .btn-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Stats Cards */
+.stat-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.stat-icon i {
+  font-size: 1.8rem;
+}
+
+.stat-card h5 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0;
+  color: #1a1a2e;
+}
+
+.stat-card small {
+  font-size: 0.75rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Campaign Cards */
+.camp-card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.camp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.camp-card .card-img-top {
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.camp-card .card-body {
+  padding: 18px;
+}
+
+.camp-title {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #1a1a2e;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.camp-type-badge {
+  font-size: 0.7rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.badge-blood {
+  background: #ffe0e0;
+  color: #d63031;
+}
+
+.badge-medical {
+  background: #e0f0ff;
+  color: #0984e3;
+}
+
+.badge-disaster {
+  background: #fff3e0;
+  color: #e17055;
+}
+
+.badge-education {
+  background: #e0ffe0;
+  color: #00b894;
+}
+
+.progress-wrap {
+  margin: 12px 0;
+}
+
+.progress {
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #6c63ff, #a29bfe);
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 0.7rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.card-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.creator {
+  font-size: 0.7rem;
+  color: #888;
+}
+
+.creator span {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #6c63ff;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #5a52d5;
+  transform: scale(1.02);
+}
+
+.btn-danger {
+  padding: 6px 18px;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* History Section */
+.history-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.history-item:hover {
+  background: #f8f9ff;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-item .camp-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.history-item small {
+  font-size: 0.7rem;
+  color: #888;
+}
+
+.history-item .amt {
+  color: #6c63ff;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+/* Page Header */
+.page-header {
+  margin-bottom: 20px;
+}
+
+.page-header h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 50px 20px;
+  background: white;
+  border-radius: 16px;
+  color: #aaa;
+}
+
+.empty-state i {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+/* Sections */
+.section {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+
+  .sidebar {
+    left: 0;
+    width: 260px;
+  }
+
+  .main {
+    margin-left: 260px;
+    padding: 30px;
+  }
+
+  .welcome-hero {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 35px;
+  }
+
+  .welcome-hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .welcome-hero p {
+    font-size: 1rem;
+  }
+
+  .welcome-hero img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .stat-card h5 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Desktop (992px and up) */
+@media (min-width: 992px) {
+  .sidebar {
+    width: 280px;
+  }
+
+  .main {
+    margin-left: 280px;
+    padding: 35px 40px;
+  }
+
+  .stat-card {
+    padding: 25px;
+  }
+
+  .stat-icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .stat-icon i {
+    font-size: 2rem;
+  }
+
+  .stat-card h5 {
+    font-size: 2rem;
+  }
+
+  .camp-card .card-img-top {
+    height: 200px;
+  }
+}
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+  .main {
+    padding: 40px 50px;
+  }
+
+  .welcome-hero {
+    padding: 45px;
+  }
+}
+
+/* Mobile Landscape (480px to 768px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .stat-card {
+    padding: 18px;
+  }
+
+  .stat-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .stat-card h5 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Small Mobile (below 480px) */
+@media (max-width: 479px) {
+  .main {
+    padding: 60px 12px 20px 12px;
+  }
+
+  .welcome-hero {
+    padding: 20px;
+  }
+
+  .welcome-hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .stat-card {
+    padding: 15px;
+  }
+
+  .stat-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .stat-icon i {
+    font-size: 1.3rem;
+  }
+
+  .stat-card h5 {
+    font-size: 1.2rem;
+  }
+
+  .history-item {
+    padding: 12px 15px;
+  }
+
+  .history-item .camp-name {
+    font-size: 0.8rem;
+  }
+
+  .btn-primary,
+  .btn-danger {
+    padding: 5px 14px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Touch-friendly improvements for mobile */
+@media (max-width: 768px) {
+  .sidebar .nav-link {
+    padding: 14px 24px;
+    font-size: 1rem;
+  }
+
+  .profile-btn {
+    padding: 12px;
+  }
+
+  button,
+  .btn,
+  .nav-link {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .camp-card .card-body {
+    padding: 15px;
+  }
+}
+
+/* Fix for Bootstrap row gaps */
+.row.g-3 {
+  --bs-gutter-y: 1rem;
+}
