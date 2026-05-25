@@ -270,7 +270,7 @@ if ($resultDonors && mysqli_num_rows($resultDonors) > 0) {
 
         </ul>
         <ul class="navbar-nav">
-          <a href="../pages/d_home.php" class="btn btn-outline-danger me-1 w-md-1">BACK</a>
+          <a href="../pages/d_home.php?section=1" class="btn btn-outline-danger me-1 w-md-1">BACK</a>
 
         </ul>
       </div>

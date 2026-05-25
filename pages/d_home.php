@@ -58,7 +58,7 @@ if (isset($_POST['logout'])) { unset($_SESSION['d_logged']); header("Location: l
     .history-item:hover { background: #f8f8ff; }
     .history-item .camp-name { font-weight: 600; font-size: 0.9rem; color: #1a1a2e; }
     .history-item .amt { font-weight: 700; color: #6c63ff; font-size: 0.9rem; }
-    .empty-state { text-align: center; padding: 60px 20px; color: #aaa; }
+    .empty-state { text-align: center; padding: 60px 20px; color: #aaa; width: 100%; }
     .empty-state i { font-size: 3rem; display: block; margin-bottom: 12px; }
     .welcome-hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%); border-radius: 20px; padding: 40px 36px; color: #fff; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
     .welcome-hero h2 { font-weight: 800; font-size: 1.8rem; margin-bottom: 6px; }
@@ -171,7 +171,7 @@ if (isset($_POST['logout'])) { unset($_SESSION['d_logged']); header("Location: l
     <div class="page-header">
       <h4><i class="bi bi-grid-fill me-2" style="color:#6c63ff;"></i>Available Campaigns</h4>
     </div>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-3">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-3 justify-content-center">
       <?php
       $sql = "SELECT c.camp_id,c.camp_title,c.camp_img,c.est_amt,c.amt_collected,c.camp_type,c.blood_group,u.user_id,u.fname
               FROM campaigns c JOIN users u ON c.recip_id=u.user_id
@@ -216,7 +216,7 @@ if (isset($_POST['logout'])) { unset($_SESSION['d_logged']); header("Location: l
     <div class="page-header">
       <h4><i class="bi bi-exclamation-diamond-fill me-2" style="color:#d63031;"></i>Emergency Campaigns</h4>
     </div>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-3">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-3 justify-content-center">
       <?php
       $sql = "SELECT c.camp_id,c.camp_title,c.camp_img,c.est_amt,c.amt_collected,c.camp_type,c.blood_group,u.user_id,u.fname
               FROM campaigns c JOIN users u ON c.recip_id=u.user_id
@@ -298,8 +298,20 @@ function showSection(n, el) {
   document.getElementById('section' + n).classList.add('active');
   document.querySelectorAll('.sidebar .nav-link').forEach(a => a.classList.remove('active'));
   if (el) el.classList.add('active');
+  history.pushState(null, '', '?section=' + n);
   return false;
 }
+const urlSection = new URLSearchParams(window.location.search).get('section');
+if (urlSection !== null) showSection(parseInt(urlSection), document.querySelectorAll('.sidebar .nav-link')[parseInt(urlSection)]);
+
+window.addEventListener('popstate', function() {
+  const s = new URLSearchParams(window.location.search).get('section') || '0';
+  const n = parseInt(s);
+  document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+  document.getElementById('section' + n).classList.add('active');
+  document.querySelectorAll('.sidebar .nav-link').forEach(a => a.classList.remove('active'));
+  document.querySelectorAll('.sidebar .nav-link')[n].classList.add('active');
+});
 </script>
 </body>
 </html>

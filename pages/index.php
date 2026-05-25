@@ -30,7 +30,7 @@
     /* HERO */
     .hero {
       min-height: 100vh;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      background: linear-gradient(135deg, #232347 0%, #1e2d50 50%, #1a4080 100%);
       display: flex; align-items: center;
       position: relative; overflow: hidden;
       padding-top: 80px;
@@ -39,14 +39,14 @@
       content: '';
       position: absolute; top: -50%; right: -20%;
       width: 700px; height: 700px;
-      background: radial-gradient(circle, rgba(108,99,255,0.25) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(108,99,255,0.2) 0%, transparent 70%);
       border-radius: 50%;
     }
     .hero::after {
       content: '';
       position: absolute; bottom: -30%; left: -10%;
       width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(214,48,49,0.2) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(214,48,49,0.15) 0%, transparent 70%);
       border-radius: 50%;
     }
     .hero-content { position: relative; z-index: 2; }
@@ -54,7 +54,7 @@
     .hero h1 { font-size: 3.5rem; font-weight: 900; color: #fff; line-height: 1.15; margin-bottom: 20px; }
     .hero h1 span.accent { background: linear-gradient(135deg, #6c63ff, #a29bfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .hero h1 span.red { background: linear-gradient(135deg, #d63031, #ff7675); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .hero p { color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 32px; max-width: 500px; line-height: 1.7; }
+    .hero p { color: rgba(255,255,255,0.75); font-size: 1.1rem; margin-bottom: 32px; max-width: 500px; line-height: 1.7; }
     .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
     .btn-hero-primary { background: linear-gradient(135deg, #6c63ff, #a29bfe); color: #fff; border: none; border-radius: 30px; padding: 14px 32px; font-weight: 700; font-size: 1rem; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; }
     .btn-hero-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(108,99,255,0.5); color: #fff; }
@@ -71,9 +71,9 @@
     /* HERO VISUAL */
     .hero-visual { position: relative; z-index: 2; }
     .hero-card {
-      background: rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.09);
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.15);
       border-radius: 20px; padding: 24px;
       color: #fff; margin-bottom: 16px;
     }
