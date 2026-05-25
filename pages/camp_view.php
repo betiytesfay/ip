@@ -217,33 +217,134 @@ if ($resultDonors && mysqli_num_rows($resultDonors) > 0) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     html, body {
-      overflow-x: hidden !important;
-      max-width: 100vw;
-      width: 100%;
+        overflow-x: hidden !important;
+        max-width: 100vw;
+        width: 100%;
     }
+
     body {
-      scroll-behavior: smooth;
+        background:
+            radial-gradient(circle at top left, rgba(99, 102, 241, 0.28), transparent 20%),
+            linear-gradient(180deg, #0f172a 0%, #111827 50%, #1f2937 100%);
+        color: #e2e8f0;
+        font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+        padding-top: 88px;
     }
 
-    .section {
-      min-height: 800px;
-
+    .navbar {
+        background: rgba(15, 23, 42, 0.96) !important;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
-    .section {
-      width: 100%;
-      padding-top: 1.5px;
-      max-width: 100%;
-      overflow-x: hidden;
-
+    .navbar .logo-text {
+        color: #fff;
+        font-weight: 800;
+        letter-spacing: 0.01em;
     }
 
-    .title-text {
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 70px;
-      font-weight: bold;
+    .navbar .btn-outline-danger {
+        border-radius: 999px;
+        border-width: 1.5px;
     }
-  </style>
+
+    .container.mt-5 {
+        max-width: 1200px;
+    }
+
+    .col-lg-8 article {
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+        color: #0f172a;
+    }
+
+    .col-lg-8 h1,
+    .col-lg-8 h2 {
+        color: #111827;
+    }
+
+    .col-lg-8 .text-muted {
+        color: #6b7280 !important;
+    }
+
+    .col-lg-8 .img-fluid.rounded {
+        width: 100%;
+        max-height: 420px;
+        object-fit: cover;
+        border-radius: 20px !important;
+    }
+
+    .col-lg-4 {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        transform: none !important;
+    }
+
+    .col-lg-4 .card {
+        border: 0;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+        color: #0f172a;
+    }
+
+    .col-lg-4 .card-header {
+        background: transparent;
+        border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+        color: #111827;
+        font-weight: 700;
+    }
+
+    .badge.bg-secondary,
+    .badge.bg-success,
+    .badge.bg-danger {
+        border-radius: 999px;
+    }
+
+    .btn-danger {
+        background: linear-gradient(135deg, #ef4444, #dc2626);
+        border: 0;
+        border-radius: 999px;
+        font-weight: 700;
+    }
+
+    .btn-danger:hover {
+        transform: translateY(-1px);
+    }
+
+    .modal-content {
+        border-radius: 20px;
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+    }
+
+    .list-group-item {
+        border-radius: 16px;
+        margin-bottom: 8px;
+        border: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .circular-progress::before {
+        background-color: #fff;
+    }
+
+    .progress-value {
+        color: #7d2ae8;
+    }
+
+    @media (max-width: 991.98px) {
+        body {
+            padding-top: 70px;
+        }
+
+        .col-lg-8 article {
+            padding: 22px;
+        }
+    }
+</style>
   <!--Bootstrap-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href=" 	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">

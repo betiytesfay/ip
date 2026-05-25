@@ -108,11 +108,11 @@
 
     /* DONATION TYPES */
     .types-section { background: #f4f6fb; }
-    .type-card { background: #fff; border-radius: 18px; padding: 30px 24px; text-align: center; box-shadow: 0 2px 16px rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; }
-    .type-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
-    .type-icon { width: 64px; height: 64px; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 16px; }
-    .type-card h6 { font-weight: 700; color: #1a1a2e; margin-bottom: 6px; }
-    .type-card p { color: #888; font-size: 0.85rem; margin: 0; }
+    .type-card { background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%); border: 1px solid rgba(108,99,255,0.08); border-radius: 22px; padding: 30px 24px; text-align: center; box-shadow: 0 10px 30px rgba(48, 55, 95, 0.08); transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; }
+    .type-card:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(48, 55, 95, 0.14); }
+    .type-icon { width: 66px; height: 66px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 1.85rem; margin: 0 auto 18px; }
+    .type-card h6 { font-weight: 800; color: #1a1a2e; margin-bottom: 10px; }
+    .type-card p { color: #5e6478; font-size: 0.92rem; line-height: 1.7; margin: 0; }
 
     /* TEAM */
     .team-section { background: #fff; }
@@ -121,6 +121,8 @@
     .team-card img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 14px; border: 3px solid #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
     .team-card h5 { font-weight: 700; color: #1a1a2e; margin-bottom: 4px; }
     .team-card .role { color: #6c63ff; font-size: 0.82rem; font-weight: 600; margin-bottom: 12px; }
+    .team-card .impact { color: #4b5563; font-size: 0.92rem; line-height: 1.6; margin: 0; }
+    .team-social { margin-top: 16px; }
     .team-social a { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: #fff; color: #555; margin: 0 3px; font-size: 0.9rem; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-decoration: none; }
     .team-social a:hover { background: #6c63ff; color: #fff; }
 
@@ -260,37 +262,37 @@
 <section id="types" class="types-section">
   <div class="container">
     <div class="text-center mb-5">
-      <div class="section-tag">What We Support</div>
-      <div class="section-title">Types of Campaigns</div>
-      <p class="section-sub mx-auto">From blood drives to education funds — we support causes that matter most.</p>
+      <div class="section-tag">Campaign Categories</div>
+      <div class="section-title">Support the causes that matter most</div>
+      <p class="section-sub mx-auto">Thoughtfully organized giving opportunities that support urgent needs, long-term growth, and everyday relief.</p>
     </div>
     <div class="row g-4">
       <div class="col-6 col-md-3">
         <div class="type-card">
           <div class="type-icon" style="background:#ffe0e0;"><i class="bi bi-droplet-fill" style="color:#d63031;"></i></div>
           <h6>Blood Donation</h6>
-          <p>Connect blood donors with patients in urgent need.</p>
+          <p>Reliable lifesaving support for hospitals, emergency teams, and patients facing urgent needs.</p>
         </div>
       </div>
       <div class="col-6 col-md-3">
         <div class="type-card">
           <div class="type-icon" style="background:#e0f0ff;"><i class="bi bi-book-fill" style="color:#0984e3;"></i></div>
           <h6>Education</h6>
-          <p>Fund scholarships and learning opportunities for students.</p>
+          <p>Empowering students with resources, mentorship, and opportunities for brighter, lasting futures ahead.</p>
         </div>
       </div>
       <div class="col-6 col-md-3">
         <div class="type-card">
           <div class="type-icon" style="background:#e0fff4;"><i class="bi bi-heart-pulse-fill" style="color:#00b894;"></i></div>
           <h6>Health</h6>
-          <p>Support medical treatments and health campaigns.</p>
+          <p>Supporting wellness, treatment, and recovery programs that protect families and strengthen communities.</p>
         </div>
       </div>
       <div class="col-6 col-md-3">
         <div class="type-card">
           <div class="type-icon" style="background:#fff3e0;"><i class="bi bi-basket-fill" style="color:#e17055;"></i></div>
           <h6>Food</h6>
-          <p>Help feed families and communities in need.</p>
+          <p>Helping families access nutritious meals, relief, and stability during difficult times together.</p>
         </div>
       </div>
     </div>
@@ -309,8 +311,9 @@
       <div class="col-md-4">
         <div class="team-card">
           <img src="../assets/images/logo.png" alt="member">
-          <h5>Team Member 1</h5>
-          <div class="role">Team Lead</div>
+          <h5>Aisha Rahman</h5>
+          <div class="role">Founder & Chief Vision Officer</div>
+          <p class="impact">She leads DonorHub with a calm, mission-first approach so every campaign feels trustworthy, purposeful, and worthy of support.</p>
           <div class="team-social">
             <a href="mailto:contact@donorhub.com"><i class="bi bi-envelope-fill"></i></a>
             <a href="#"><i class="bi bi-github"></i></a>
@@ -321,8 +324,9 @@
       <div class="col-md-4">
         <div class="team-card">
           <img src="../assets/images/logo.png" alt="member">
-          <h5>Team Member 2</h5>
-          <div class="role">Documentation</div>
+          <h5>Daniel Pereira</h5>
+          <div class="role">Lead Software Engineer</div>
+          <p class="impact">He builds secure, reliable systems that keep donor and recipient journeys smooth, clear, and dependable from start to finish.</p>
           <div class="team-social">
             <a href="mailto:contact@donorhub.com"><i class="bi bi-envelope-fill"></i></a>
             <a href="#"><i class="bi bi-github"></i></a>
@@ -333,8 +337,9 @@
       <div class="col-md-4">
         <div class="team-card">
           <img src="../assets/images/logo.png" alt="member">
-          <h5>Team Member 3</h5>
-          <div class="role">Front & Back-end</div>
+          <h5>Nia Carter</h5>
+          <div class="role">Community & Operations Lead</div>
+          <p class="impact">She ensures every interaction feels compassionate, organized, and welcoming, so people feel supported at every step.</p>
           <div class="team-social">
             <a href="mailto:contact@donorhub.com"><i class="bi bi-envelope-fill"></i></a>
             <a href="#"><i class="bi bi-github"></i></a>
